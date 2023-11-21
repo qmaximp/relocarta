@@ -1,0 +1,17 @@
+.services > .servicesBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
+}
+.services > .servicesItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.services > .servicesItem > img {
+  max-width: 500px;
+  max-height: 160px;
+}

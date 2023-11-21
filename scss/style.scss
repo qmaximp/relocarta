@@ -25,6 +25,11 @@ body {
 button {
 	cursor: pointer;
 	text-wrap: nowrap;
+	transition: .5s;
+
+	&:hover {
+		background: $mainBgColorHover !important;
+	}
 }
 
 a,
@@ -52,7 +57,50 @@ h2 {
 
 a {
 	text-decoration: none;
+	color: white;
+	transition: .35s;
+
+	&:hover {
+		color: $mainBgColor !important;
+	}
+
+	&:active {
+		scale: 0.95 !important;
+	}
+
+}
+
+.wrapper {
+	padding: 0 40px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1500px;
+}
+
+.messengers {
+	&>a {
+		&:hover {
+			scale: 1.1
+		}
+	}
 }
 
 
 @import './styleComponets/header.scss';
+
+
+
+
+
+//< !-- slider -->
+//< !-- map -->
+//< !-- Unique places-->
+
+@import './styleComponets/services.scss';
+
+//< !-- Last minute tours -->
+//< !-- additional information -->
+
+
+
+@import './styleComponets/footer.scss';

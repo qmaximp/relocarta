@@ -26,10 +26,12 @@ header {
 			&>a {
 				font-size: 18px;
 				color: $mainColor;
+
 			}
 
 			&>.active {
 				color: $mainBgColor;
+				padding: 0 0 5px 0;
 				border-bottom: 2px solid $mainBgColor;
 			}
 		}
@@ -275,6 +277,9 @@ header {
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
 	header {
+		display: none;
+
+		// временно
 		&>.topHeader {
 			&>.logo {
 				&>img {}

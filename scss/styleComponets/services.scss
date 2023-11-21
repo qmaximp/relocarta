@@ -1,0 +1,27 @@
+.services {
+	&>h2 {}
+
+	&>.servicesBlock {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+
+
+		&>.servicesItem {
+			display: flex;
+
+			&>img {
+				max-width: 500px;
+				max-height: 160px;
+			}
+
+			&>div {}
+		}
+	}
+}
+
+
+
+
+
+.servicesItemInfo {}
