@@ -1,27 +1,339 @@
+@import '../breaks.scss';
+
 .services {
-	&>h2 {}
+	margin-bottom: 100px;
+
+	&>h2 {
+		margin-bottom: 20px;
+	}
 
 	&>.servicesBlock {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 50px;
-
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
 
 		&>.servicesItem {
-			display: flex;
+			display: grid;
+			grid-template-columns: 60% 40%;
+			border-radius: 25px;
+			box-shadow: 0px 0px 15px -5px #000;
 
 			&>img {
-				max-width: 500px;
-				max-height: 160px;
+				width: 100%;
+				min-width: 250px;
+				max-width: 450px;
+				min-height: 100px;
+				max-height: 200px;
+				object-fit: cover;
+				border-radius: 25px;
 			}
 
-			&>div {}
+			&>.servicesItemInfo {
+				padding: 10px 10px 10px 15px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				&>div:first-child {
+					&>h2 {
+						text-wrap: wrap;
+						font-size: 20px;
+					}
+
+					&>p {
+						color: #707070;
+						font-weight: 300;
+						font-size: 12px;
+					}
+				}
+
+				&>div:last-child {
+					&>button {
+						background: transparent;
+						padding: 5px 10px;
+						border: 2px solid $mainBgColor;
+						border-radius: 10px;
+
+						&:hover {
+							background: $mainBgColor !important;
+						}
+					}
+				}
+			}
 		}
 	}
 }
 
+@media only screen and (min-width: $desktopWide) {
+	.services {
+		margin-bottom: 100px;
 
+		&>h2 {
+			margin-bottom: 20px;
+		}
 
+		&>.servicesBlock {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
 
+			&>.servicesItem {
+				display: grid;
+				grid-template-columns: 60% 40%;
+				border-radius: 25px;
+				box-shadow: 0px 0px 15px -5px #000;
 
-.servicesItemInfo {}
+				&>img {
+					width: 100%;
+					min-width: 250px;
+					max-width: 450px;
+					min-height: 100px;
+					max-height: 200px;
+					object-fit: cover;
+					border-radius: 25px;
+				}
+
+				&>.servicesItemInfo {
+					padding: 10px 10px 10px 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					&>div:first-child {
+						&>h2 {
+							text-wrap: wrap;
+							font-size: 24px;
+						}
+
+						&>p {
+							color: #707070;
+							font-weight: 300;
+							font-size: 12px;
+						}
+					}
+
+					&>div:last-child {
+						&>button {
+							background: transparent;
+							padding: 5px 10px;
+							border: 2px solid $mainBgColor;
+							border-radius: 10px;
+
+							&:hover {
+								background: $mainBgColor !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+	.services {
+		margin-bottom: 100px;
+
+		&>h2 {
+			margin-bottom: 20px;
+		}
+
+		&>.servicesBlock {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+
+			&>.servicesItem {
+				display: grid;
+				grid-template-columns: 1fr;
+				border-radius: 25px;
+				box-shadow: 0px 0px 15px -5px #000;
+
+				&>img {
+					width: 100%;
+					min-width: 100%;
+					max-width: 100%;
+					min-height: 200px;
+					max-height: 300px;
+					object-fit: cover;
+					border-radius: 25px;
+				}
+
+				&>.servicesItemInfo {
+					padding: 10px 10px 10px 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					gap: 25px;
+
+					&>div:first-child {
+						display: grid;
+						justify-items: center;
+
+						&>h2 {
+							text-wrap: wrap;
+							font-size: 24px;
+						}
+
+						&>p {
+							color: #707070;
+							font-weight: 300;
+							font-size: 12px;
+						}
+					}
+
+					&>div:last-child {
+						&>button {
+							background: transparent;
+							padding: 5px 10px;
+							border: 2px solid $mainBgColor;
+							border-radius: 10px;
+							width: 100%;
+
+							&:hover {
+								background: $mainBgColor !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+	.services {
+		margin-bottom: 100px;
+
+		&>h2 {
+			margin-bottom: 20px;
+		}
+
+		&>.servicesBlock {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+
+			&>.servicesItem {
+				display: grid;
+				grid-template-columns: 60% 40%;
+				border-radius: 25px;
+				box-shadow: 0px 0px 15px -5px #000;
+
+				&>img {
+					width: 100%;
+					min-width: 250px;
+					max-width: 450px;
+					min-height: 100px;
+					max-height: 200px;
+					object-fit: cover;
+					border-radius: 25px;
+				}
+
+				&>.servicesItemInfo {
+					padding: 10px 10px 10px 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					&>div:first-child {
+						&>h2 {
+							text-wrap: wrap;
+							font-size: 16px;
+						}
+
+						&>p {
+							color: #707070;
+							font-weight: 200;
+							font-size: 12px;
+						}
+					}
+
+					&>div:last-child {
+						&>button {
+							background: transparent;
+							padding: 5px 10px;
+							border: 2px solid $mainBgColor;
+							border-radius: 10px;
+
+							&:hover {
+								background: $mainBgColor !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $mobile) {
+	.services {
+		margin-bottom: 100px;
+
+		&>h2 {
+			margin-bottom: 20px;
+		}
+
+		&>.servicesBlock {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+
+			&>.servicesItem {
+				display: grid;
+				grid-template-columns: 1fr;
+				border-radius: 25px;
+				box-shadow: 0px 0px 15px -5px #000;
+
+				&>img {
+					width: 100%;
+					min-width: 100%;
+					max-width: 100%;
+					min-height: 200px;
+					max-height: 300px;
+					object-fit: cover;
+					border-radius: 25px;
+				}
+
+				&>.servicesItemInfo {
+					padding: 10px 10px 10px 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					gap: 25px;
+
+					&>div:first-child {
+						display: grid;
+						justify-items: center;
+
+						&>h2 {
+							text-wrap: wrap;
+							font-size: 20px;
+						}
+
+						&>p {
+							color: #707070;
+							font-weight: 300;
+							font-size: 12px;
+						}
+					}
+
+					&>div:last-child {
+						&>button {
+							background: transparent;
+							padding: 5px 10px;
+							border: 2px solid $mainBgColor;
+							border-radius: 10px;
+							width: 100%;
+
+							&:hover {
+								background: $mainBgColor !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,297 @@
+@import '../breaks.scss';
+@import '../varibles.scss';
+
+.uniquePlaces {
+	margin-bottom: 100px;
+
+
+	&>h2 {
+		margin-bottom: 20px;
+	}
+
+	&>.tab {
+		&>.tab-nav {
+			display: flex;
+			gap: 30px;
+			align-items: center;
+			margin-bottom: 20px;
+			overflow-x: scroll;
+
+			&>.tab-btn {
+				color: $mainColor;
+				padding: 0 0 3px 0;
+			}
+
+			&>.tab-btn-active {
+				pointer-events: none;
+				color: $mainColor;
+				font-weight: 500;
+				border-bottom: 2px solid $mainBgColor;
+				padding: 0 0 3px 0;
+			}
+		}
+
+		&>.tab-content {
+			&>.tab-pane:not(.tab-pane-show) {
+				display: none;
+
+			}
+
+			&>.tab-pane {
+				display: flex;
+				gap: 30px 20px;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				&>.uniquePlacesItem {
+					max-width: 300px;
+					box-shadow: 0px 0px 15px -5px #000;
+					border-radius: 25px;
+
+					&>img {
+						width: 300px;
+						height: 300px;
+						object-fit: cover;
+						border-radius: 25px;
+						box-shadow: 0px 0px 15px -5px #000;
+					}
+
+					&>.itemInfo {
+						padding: 0px 10px 10px 10px;
+
+						&>div {
+							margin-bottom: 15px;
+
+
+							&>h2 {
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								overflow: hidden;
+								font-size: 24px;
+
+							}
+
+							&>p {
+								color: #707070;
+								font-weight: 300;
+								font-size: 12px;
+							}
+						}
+
+						&>button {
+							background: transparent;
+							padding: 5px 10px;
+							border: 2px solid $mainBgColor;
+							border-radius: 10px;
+							width: 100%;
+
+							&:hover {
+								background: $mainBgColor !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: $desktopWide) {}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+	.uniquePlaces {
+		margin-bottom: 100px;
+
+
+		&>h2 {
+			margin-bottom: 20px;
+		}
+
+		&>.tab {
+			&>.tab-nav {
+				display: flex;
+				gap: 30px;
+				align-items: center;
+				margin-bottom: 20px;
+				overflow-x: scroll;
+
+				&>.tab-btn {
+					color: $mainColor;
+					padding: 0 0 3px 0;
+				}
+
+				&>.tab-btn-active {
+					pointer-events: none;
+					color: $mainColor;
+					font-weight: 500;
+					border-bottom: 2px solid $mainBgColor;
+					padding: 0 0 3px 0;
+				}
+			}
+
+			&>.tab-content {
+				&>.tab-pane:not(.tab-pane-show) {
+					display: none;
+
+				}
+
+				&>.tab-pane {
+					display: flex;
+					gap: 30px 20px;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					&>.uniquePlacesItem {
+						max-width: 300px;
+						box-shadow: 0px 0px 15px -5px #000;
+						border-radius: 25px;
+
+						&>img {
+							width: 300px;
+							height: 300px;
+							object-fit: cover;
+							border-radius: 25px;
+							box-shadow: 0px 0px 15px -5px #000;
+						}
+
+						&>.itemInfo {
+							padding: 0px 10px 10px 10px;
+
+							&>div {
+								margin-bottom: 15px;
+
+
+								&>h2 {
+									text-overflow: ellipsis;
+									white-space: nowrap;
+									overflow: hidden;
+									font-size: 24px;
+
+								}
+
+								&>p {
+									color: #707070;
+									font-weight: 300;
+									font-size: 12px;
+								}
+							}
+
+							&>button {
+								background: transparent;
+								padding: 5px 10px;
+								border: 2px solid $mainBgColor;
+								border-radius: 10px;
+								width: 100%;
+
+								&:hover {
+									background: $mainBgColor !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {}
+
+@media only screen and (max-width: $mobile) {
+	.uniquePlaces {
+		margin-bottom: 100px;
+
+
+		&>h2 {
+			margin-bottom: 20px;
+		}
+
+		&>.tab {
+			&>.tab-nav {
+				display: flex;
+				gap: 30px;
+				align-items: center;
+				margin-bottom: 20px;
+				overflow-x: scroll;
+
+				&>.tab-btn {
+					color: $mainColor;
+					padding: 0 0 3px 0;
+				}
+
+				&>.tab-btn-active {
+					pointer-events: none;
+					color: $mainColor;
+					font-weight: 500;
+					border-bottom: 2px solid $mainBgColor;
+					padding: 0 0 3px 0;
+				}
+			}
+
+			&>.tab-content {
+				&>.tab-pane:not(.tab-pane-show) {
+					display: none;
+
+				}
+
+				&>.tab-pane {
+					display: flex;
+					gap: 30px 20px;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					&>.uniquePlacesItem {
+						max-width: 250px;
+						box-shadow: 0px 0px 15px -5px #000;
+						border-radius: 25px;
+
+						&>img {
+							width: 250px;
+							height: 250px;
+							object-fit: cover;
+							border-radius: 25px;
+							box-shadow: 0px 0px 15px -5px #000;
+						}
+
+						&>.itemInfo {
+							padding: 0px 10px 10px 10px;
+
+							&>div {
+								margin-bottom: 15px;
+
+
+								&>h2 {
+									text-overflow: ellipsis;
+									white-space: nowrap;
+									overflow: hidden;
+									font-size: 24px;
+
+								}
+
+								&>p {
+									color: #707070;
+									font-weight: 300;
+									font-size: 12px;
+								}
+							}
+
+							&>button {
+								background: transparent;
+								padding: 5px 10px;
+								border: 2px solid $mainBgColor;
+								border-radius: 10px;
+								width: 100%;
+
+								&:hover {
+									background: $mainBgColor !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -488,7 +488,7 @@ footer {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: 0.75rem 1rem;
+			padding: 0.75rem 0.25rem;
 			color: $mainBgColor;
 			font-weight: 600;
 			font-size: 20px;
@@ -524,7 +524,7 @@ footer {
 	}
 
 	.accordion__content {
-		padding: 0.75rem 1rem;
+		padding: 0.75rem 0.5rem;
 		background: transparent;
 		border-bottom-right-radius: 0.25rem;
 		border-bottom-left-radius: 0.25rem;

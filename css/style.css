@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /* mobile */
 /* landscape */
 /* portrait */
 /* desktop */
 /*
 
-@import '../../../style/breaks.scss';
+@import '../breaks.scss';
 
 @media only screen and (min-width: $desktopWide) {}
 
@@ -25,6 +26,11 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Inter, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 html {
@@ -49,7 +55,6 @@ button:hover {
 
 a,
 span,
-p,
 b,
 h1,
 h2,
@@ -67,7 +72,6 @@ h1 {
 h2 {
   font-weight: 600;
   font-size: 28px;
-  line-height: 30px;
 }
 
 a {
@@ -100,7 +104,7 @@ a:active {
 /* desktop */
 /*
 
-@import '../../../style/breaks.scss';
+@import '../breaks.scss';
 
 @media only screen and (min-width: $desktopWide) {}
 
@@ -366,22 +370,639 @@ header > .bottomHeader > .messengers > a > img {
     display: none;
   }
 }
-.services > .servicesBlock {
+@media only screen and (max-width: 767px) {
+  header {
+    display: none;
+  }
+}
+/* mobile */
+/* landscape */
+/* portrait */
+/* desktop */
+/*
+
+@import '../breaks.scss';
+
+@media only screen and (min-width: $desktopWide) {}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {}
+
+@media only screen and (max-width: $mobile) {}
+
+*/
+.uniquePlaces {
+  margin-bottom: 100px;
+}
+.uniquePlaces > h2 {
+  margin-bottom: 20px;
+}
+.uniquePlaces > .tab > .tab-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+}
+.uniquePlaces > .tab > .tab-nav > .tab-btn {
+  color: black;
+  padding: 0 0 3px 0;
+}
+.uniquePlaces > .tab > .tab-nav > .tab-btn-active {
+  pointer-events: none;
+  color: black;
+  font-weight: 500;
+  border-bottom: 2px solid #FF974F;
+  padding: 0 0 3px 0;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane:not(.tab-pane-show) {
+  display: none;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem {
+  max-width: 300px;
+  -webkit-box-shadow: 0px 0px 15px -5px #000;
+          box-shadow: 0px 0px 15px -5px #000;
+  border-radius: 25px;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 15px -5px #000;
+          box-shadow: 0px 0px 15px -5px #000;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo {
+  padding: 0px 10px 10px 10px;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div {
+  margin-bottom: 15px;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div > h2 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24px;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div > p {
+  color: #707070;
+  font-weight: 300;
+  font-size: 12px;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > button {
+  background: transparent;
+  padding: 5px 10px;
+  border: 2px solid #FF974F;
+  border-radius: 10px;
+  width: 100%;
+}
+.uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > button:hover {
+  background: #FF974F !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .uniquePlaces {
+    margin-bottom: 100px;
+  }
+  .uniquePlaces > h2 {
+    margin-bottom: 20px;
+  }
+  .uniquePlaces > .tab > .tab-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+  }
+  .uniquePlaces > .tab > .tab-nav > .tab-btn {
+    color: black;
+    padding: 0 0 3px 0;
+  }
+  .uniquePlaces > .tab > .tab-nav > .tab-btn-active {
+    pointer-events: none;
+    color: black;
+    font-weight: 500;
+    border-bottom: 2px solid #FF974F;
+    padding: 0 0 3px 0;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane:not(.tab-pane-show) {
+    display: none;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem {
+    max-width: 300px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+    border-radius: 25px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo {
+    padding: 0px 10px 10px 10px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div {
+    margin-bottom: 15px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div > h2 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div > p {
+    color: #707070;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > button {
+    background: transparent;
+    padding: 5px 10px;
+    border: 2px solid #FF974F;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > button:hover {
+    background: #FF974F !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .uniquePlaces {
+    margin-bottom: 100px;
+  }
+  .uniquePlaces > h2 {
+    margin-bottom: 20px;
+  }
+  .uniquePlaces > .tab > .tab-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+  }
+  .uniquePlaces > .tab > .tab-nav > .tab-btn {
+    color: black;
+    padding: 0 0 3px 0;
+  }
+  .uniquePlaces > .tab > .tab-nav > .tab-btn-active {
+    pointer-events: none;
+    color: black;
+    font-weight: 500;
+    border-bottom: 2px solid #FF974F;
+    padding: 0 0 3px 0;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane:not(.tab-pane-show) {
+    display: none;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem {
+    max-width: 250px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+    border-radius: 25px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > img {
+    width: 250px;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo {
+    padding: 0px 10px 10px 10px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div {
+    margin-bottom: 15px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div > h2 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > div > p {
+    color: #707070;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > button {
+    background: transparent;
+    padding: 5px 10px;
+    border: 2px solid #FF974F;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .uniquePlaces > .tab > .tab-content > .tab-pane > .uniquePlacesItem > .itemInfo > button:hover {
+    background: #FF974F !important;
+  }
+}
+/* mobile */
+/* landscape */
+/* portrait */
+/* desktop */
+/*
+
+@import '../breaks.scss';
+
+@media only screen and (min-width: $desktopWide) {}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {}
+
+@media only screen and (max-width: $mobile) {}
+
+*/
+.services {
+  margin-bottom: 100px;
+}
+.services > h2 {
+  margin-bottom: 20px;
+}
+.services > .servicesBlock {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 .services > .servicesBlock > .servicesItem {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+  grid-template-columns: 60% 40%;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 15px -5px #000;
+          box-shadow: 0px 0px 15px -5px #000;
+}
+.services > .servicesBlock > .servicesItem > img {
+  width: 100%;
+  min-width: 250px;
+  max-width: 450px;
+  min-height: 100px;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+.services > .servicesBlock > .servicesItem > .servicesItemInfo {
+  padding: 10px 10px 10px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.services > .servicesBlock > .servicesItem > img {
-  max-width: 500px;
-  max-height: 160px;
+.services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > h2 {
+  text-wrap: wrap;
+  font-size: 20px;
+}
+.services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > p {
+  color: #707070;
+  font-weight: 300;
+  font-size: 12px;
+}
+.services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button {
+  background: transparent;
+  padding: 5px 10px;
+  border: 2px solid #FF974F;
+  border-radius: 10px;
+}
+.services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button:hover {
+  background: #FF974F !important;
+}
+
+@media only screen and (min-width: 1770px) {
+  .services {
+    margin-bottom: 100px;
+  }
+  .services > h2 {
+    margin-bottom: 20px;
+  }
+  .services > .servicesBlock {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 30px 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .services > .servicesBlock > .servicesItem {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% 40%;
+    grid-template-columns: 60% 40%;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+  }
+  .services > .servicesBlock > .servicesItem > img {
+    width: 100%;
+    min-width: 250px;
+    max-width: 450px;
+    min-height: 100px;
+    max-height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 25px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo {
+    padding: 10px 10px 10px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > h2 {
+    text-wrap: wrap;
+    font-size: 24px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > p {
+    color: #707070;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button {
+    background: transparent;
+    padding: 5px 10px;
+    border: 2px solid #FF974F;
+    border-radius: 10px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button:hover {
+    background: #FF974F !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .services {
+    margin-bottom: 100px;
+  }
+  .services > h2 {
+    margin-bottom: 20px;
+  }
+  .services > .servicesBlock {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .services > .servicesBlock > .servicesItem {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+  }
+  .services > .servicesBlock > .servicesItem > img {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 25px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo {
+    padding: 10px 10px 10px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 25px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > h2 {
+    text-wrap: wrap;
+    font-size: 24px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > p {
+    color: #707070;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button {
+    background: transparent;
+    padding: 5px 10px;
+    border: 2px solid #FF974F;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button:hover {
+    background: #FF974F !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .services {
+    margin-bottom: 100px;
+  }
+  .services > h2 {
+    margin-bottom: 20px;
+  }
+  .services > .servicesBlock {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 30px 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .services > .servicesBlock > .servicesItem {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% 40%;
+    grid-template-columns: 60% 40%;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+  }
+  .services > .servicesBlock > .servicesItem > img {
+    width: 100%;
+    min-width: 250px;
+    max-width: 450px;
+    min-height: 100px;
+    max-height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 25px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo {
+    padding: 10px 10px 10px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > h2 {
+    text-wrap: wrap;
+    font-size: 16px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > p {
+    color: #707070;
+    font-weight: 200;
+    font-size: 12px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button {
+    background: transparent;
+    padding: 5px 10px;
+    border: 2px solid #FF974F;
+    border-radius: 10px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button:hover {
+    background: #FF974F !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .services {
+    margin-bottom: 100px;
+  }
+  .services > h2 {
+    margin-bottom: 20px;
+  }
+  .services > .servicesBlock {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .services > .servicesBlock > .servicesItem {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000;
+            box-shadow: 0px 0px 15px -5px #000;
+  }
+  .services > .servicesBlock > .servicesItem > img {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 25px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo {
+    padding: 10px 10px 10px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 25px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > h2 {
+    text-wrap: wrap;
+    font-size: 20px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:first-child > p {
+    color: #707070;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button {
+    background: transparent;
+    padding: 5px 10px;
+    border: 2px solid #FF974F;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .services > .servicesBlock > .servicesItem > .servicesItemInfo > div:last-child > button:hover {
+    background: #FF974F !important;
+  }
 }
 footer {
   background-color: #1E1A1A;
@@ -880,7 +1501,7 @@ footer > .wrapper > .footerDesktop > .mainInfoFooter > p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.25rem;
     color: #FF974F;
     font-weight: 600;
     font-size: 20px;
@@ -915,7 +1536,7 @@ footer > .wrapper > .footerDesktop > .mainInfoFooter > p {
     border-bottom-left-radius: 0.25rem;
   }
   .accordion__content {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.5rem;
     background: transparent;
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
@@ -928,5 +1549,47 @@ footer > .wrapper > .footerDesktop > .mainInfoFooter > p {
   }
   .accordion__item:not(.accordion__item_show) .accordion__body {
     display: none;
+  }
+}
+/* адаптив */
+/* mobile */
+/* landscape */
+/* portrait */
+/* desktop */
+/*
+
+@import '../breaks.scss';
+
+@media only screen and (min-width: $desktopWide) {}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {}
+
+@media only screen and (max-width: $mobile) {}
+
+*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .wrapper {
+    padding: 0 30px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
   }
 }

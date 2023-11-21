@@ -12,6 +12,11 @@
 	font-family: Inter, sans-serif;
 }
 
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
 html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -34,7 +39,6 @@ button {
 
 a,
 span,
-p,
 b,
 h1,
 h2,
@@ -52,7 +56,6 @@ h1 {
 h2 {
 	font-weight: 600;
 	font-size: 28px;
-	line-height: 30px;
 }
 
 a {
@@ -87,20 +90,44 @@ a {
 
 
 @import './styleComponets/header.scss';
-
-
-
-
-
 //< !-- slider -->
 //< !-- map -->
-//< !-- Unique places-->
-
+@import './styleComponets/uniquePlaces.scss';
 @import './styleComponets/services.scss';
-
 //< !-- Last minute tours -->
 //< !-- additional information -->
-
-
-
 @import './styleComponets/footer.scss';
+
+
+
+/* адаптив */
+@import './breaks.scss';
+
+@media only screen and (min-width: $desktopWide) {}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+	.wrapper {
+		padding: 0 20px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1500px;
+	}
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+	.wrapper {
+		padding: 0 30px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1500px;
+	}
+}
+
+@media only screen and (max-width: $mobile) {
+	.wrapper {
+		padding: 0 10px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1500px;
+	}
+}
