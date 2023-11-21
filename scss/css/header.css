@@ -1,0 +1,266 @@
+/* mobile */
+/* landscape */
+/* portrait */
+/* desktop */
+/*
+
+@import '../../../style/breaks.scss';
+
+@media only screen and (min-width: $desktopWide) {}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {}
+
+@media only screen and (max-width: $mobile) {}
+
+*/
+header {
+  margin: 12px 32px;
+}
+header > .topHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  margin: 0 0 5px 0;
+}
+header > .topHeader > .logo > img {
+  width: 200px;
+  height: 60px;
+}
+header > .topHeader > .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+header > .topHeader > .links > a {
+  font-size: 18px;
+  color: black;
+}
+header > .topHeader > .links > .active {
+  color: #FF974F;
+  border-bottom: 2px solid #FF974F;
+}
+header > .topHeader > .user > img {
+  width: 36px;
+  height: 36px;
+}
+header > .bottomHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  max-height: 36px;
+  max-height: 36px;
+}
+header > .bottomHeader > .search {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25) inset;
+}
+header > .bottomHeader > .search > input {
+  width: 100%;
+  padding: 0 15px 0 15px;
+  border-radius: 25px 0 0 25px;
+  background: transparent;
+}
+header > .bottomHeader > .search > button {
+  border-radius: 25px;
+  width: 100px;
+  background-color: #FF974F;
+  color: white;
+}
+header > .bottomHeader > .buttonHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header > .bottomHeader > .buttonHeader > button {
+  padding: 0 15px 0 15px;
+  border-radius: 15px;
+  width: 100%;
+  background-color: #FF974F;
+  color: white;
+  height: auto;
+}
+header > .bottomHeader > .messengers {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+header > .bottomHeader > .messengers > a > img {
+  width: 36px;
+  height: 36px;
+}
+
+@media only screen and (min-width: 1770px) {
+  header {
+    margin: 12px 32px;
+  }
+  header > .topHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 50px;
+    margin: 0 0 5px 0;
+  }
+  header > .topHeader > .logo > img {
+    width: 200px;
+    height: 60px;
+  }
+  header > .topHeader > .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 40px;
+  }
+  header > .topHeader > .links > a {
+    font-size: 18px;
+    color: black;
+  }
+  header > .topHeader > .links > .active {
+    color: #FF974F;
+    border-bottom: 2px solid #FF974F;
+  }
+  header > .topHeader > .user > img {
+    width: 36px;
+    height: 36px;
+  }
+  header > .bottomHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 50px;
+    max-height: 36px;
+    max-height: 36px;
+  }
+  header > .bottomHeader > .search {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25) inset;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  header > .bottomHeader > .search > input {
+    width: 100%;
+    padding: 0 15px 0 15px;
+    border-radius: 25px 0 0 25px;
+    background: transparent;
+  }
+  header > .bottomHeader > .search > button {
+    border-radius: 25px;
+    width: 100px;
+    background-color: #FF974F;
+    color: white;
+  }
+  header > .bottomHeader > .buttonHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header > .bottomHeader > .buttonHeader > button {
+    padding: 0 15px 0 15px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #FF974F;
+    color: white;
+    height: auto;
+  }
+  header > .bottomHeader > .messengers {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+  header > .bottomHeader > .messengers > a > img {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  header > .topHeader {
+    gap: 30px;
+  }
+  header > .topHeader > .logo > img {
+    width: 120px;
+    height: 60px;
+  }
+  header > .topHeader > .links {
+    gap: 30px;
+  }
+  header > .topHeader > .links > a {
+    font-size: 16px;
+  }
+  header > .topHeader > .user > img {
+    width: 28px;
+    height: 28px;
+  }
+  header > .bottomHeader > .messengers {
+    gap: 20px;
+  }
+  header > .bottomHeader > .messengers > a > img {
+    width: 28px;
+    height: 28px;
+  }
+}

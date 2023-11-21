@@ -1,0 +1,319 @@
+@import '../breaks.scss';
+@import '../varibles.scss';
+
+header {
+	margin: 12px 32px;
+
+	&>.topHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 50px;
+		margin: 0 0 5px 0;
+
+		&>.logo {
+			&>img {
+				width: 200px;
+				height: 60px;
+			}
+		}
+
+		&>.links {
+			display: flex;
+			justify-content: space-between;
+			gap: 40px;
+
+			&>a {
+				font-size: 18px;
+				color: $mainColor;
+			}
+
+			&>.active {
+				color: $mainBgColor;
+				border-bottom: 2px solid $mainBgColor;
+			}
+		}
+
+		&>.user {
+			&>img {
+				width: 36px;
+				height: 36px;
+			}
+		}
+	}
+
+	&>.bottomHeader {
+		display: flex;
+		justify-content: space-between;
+		gap: 50px;
+		max-height: 36px;
+		max-height: 36px;
+
+		&>.search {
+			flex: 3;
+			display: flex;
+			justify-content: space-between;
+			border-radius: 25px;
+			box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25) inset;
+
+			&>input {
+				width: 100%;
+				padding: 0 15px 0 15px;
+				border-radius: 25px 0 0 25px;
+				background: transparent;
+			}
+
+			&>button {
+				border-radius: 25px;
+				width: 100px;
+				background-color: $mainBgColor;
+				color: white;
+			}
+		}
+
+		&>.buttonHeader {
+			display: flex;
+
+			&>button {
+				padding: 0 15px 0 15px;
+				border-radius: 15px;
+				width: 100%;
+				background-color: $mainBgColor;
+				color: white;
+				height: auto;
+			}
+		}
+
+		&>.messengers {
+			flex: 2;
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			gap: 40px;
+
+			&>a {
+				&>img {
+					width: 36px;
+					height: 36px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+@media only screen and (min-width: $desktopWide) {
+	header {
+		margin: 12px 32px;
+
+		&>.topHeader {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 50px;
+			margin: 0 0 5px 0;
+
+			&>.logo {
+				&>img {
+					width: 200px;
+					height: 60px;
+				}
+			}
+
+			&>.links {
+				display: flex;
+				justify-content: space-between;
+				gap: 40px;
+
+				&>a {
+					font-size: 18px;
+					color: $mainColor;
+				}
+
+				&>.active {
+					color: $mainBgColor;
+					border-bottom: 2px solid $mainBgColor;
+				}
+			}
+
+			&>.user {
+				&>img {
+					width: 36px;
+					height: 36px;
+				}
+			}
+		}
+
+		&>.bottomHeader {
+			display: flex;
+			justify-content: space-between;
+			gap: 50px;
+			max-height: 36px;
+			max-height: 36px;
+
+			&>.search {
+				flex: 3;
+				display: flex;
+				justify-content: space-between;
+				border-radius: 25px;
+				box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25) inset;
+
+				&>input {
+					width: 100%;
+					padding: 0 15px 0 15px;
+					border-radius: 25px 0 0 25px;
+					background: transparent;
+				}
+
+				&>button {
+					border-radius: 25px;
+					width: 100px;
+					background-color: $mainBgColor;
+					color: white;
+				}
+			}
+
+			&>.buttonHeader {
+				display: flex;
+
+				&>button {
+					padding: 0 15px 0 15px;
+					border-radius: 15px;
+					width: 100%;
+					background-color: $mainBgColor;
+					color: white;
+					height: auto;
+				}
+			}
+
+			&>.messengers {
+				flex: 2;
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				gap: 40px;
+
+				&>a {
+					&>img {
+						width: 36px;
+						height: 36px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+	header {
+		&>.topHeader {
+			gap: 30px;
+
+			&>.logo {
+				&>img {
+					width: 120px;
+					height: 60px
+				}
+			}
+
+			&>.links {
+				gap: 30px;
+
+				&>a {
+					font-size: 16px;
+				}
+
+				&>.active {}
+			}
+
+			&>.user {
+				&>img {
+					width: 28px;
+					height: 28px;
+				}
+			}
+		}
+
+		&>.bottomHeader {
+			&>.search {
+				&>input {}
+
+				&>button {}
+			}
+
+			&>.buttonHeader {
+				&>button {}
+			}
+
+			&>.messengers {
+				gap: 20px;
+
+				&>a {
+					&>img {
+						width: 28px;
+						height: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+	header {
+		&>.topHeader {
+			&>.logo {
+				&>img {}
+			}
+
+			&>.links {
+				&>a {}
+
+				&>.active {}
+			}
+
+			&>.user {
+				&>img {}
+			}
+		}
+
+		&>.bottomHeader {
+			&>.search {
+				&>input {}
+
+				&>button {}
+			}
+
+			&>.buttonHeader {
+				&>button {}
+			}
+
+			&>.messengers {
+				&>a {
+					&>img {}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+@media only screen and (min-width: $mobile) {}

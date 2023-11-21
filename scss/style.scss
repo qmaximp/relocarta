@@ -1,0 +1,58 @@
+@import './varibles.scss';
+@import './breaks.scss';
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: Inter, sans-serif;
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased
+}
+
+button {
+	cursor: pointer;
+	text-wrap: nowrap;
+}
+
+a,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: 20px;
+	text-wrap: nowrap;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 30px;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+@import './styleComponets/header.scss';
