@@ -87,6 +87,9 @@ class ItcAccordion {
   }
 }
 
-new ItcAccordion(document.querySelector(".accordion"), {
+new ItcAccordion(document.querySelector(".accordionBurger"), {
+  alwaysOpen: true,
+});
+new ItcAccordion(document.querySelector(".accordionFooter"), {
   alwaysOpen: true,
 });

@@ -2,7 +2,6 @@
 @import '../varibles.scss';
 
 header {
-	margin: 12px 32px;
 
 	&>.topHeader {
 		display: flex;
@@ -12,6 +11,8 @@ header {
 		margin: 0 0 5px 0;
 
 		&>.logo {
+			flex: 1;
+
 			&>img {
 				width: 200px;
 				height: 60px;
@@ -19,6 +20,7 @@ header {
 		}
 
 		&>.links {
+			flex: 8;
 			display: flex;
 			justify-content: space-between;
 			gap: 40px;
@@ -26,7 +28,24 @@ header {
 			&>a {
 				font-size: 18px;
 				color: $mainColor;
+				display: flex;
+				align-items: center;
 
+				&>svg {
+					&>path {
+						transition: .5s;
+					}
+				}
+
+				&:hover {
+					&>svg {
+						&>path {
+							color: $mainBgColor;
+							fill: $mainBgColor;
+							background-color: $mainBgColor;
+						}
+					}
+				}
 			}
 
 			&>.active {
@@ -37,6 +56,10 @@ header {
 		}
 
 		&>.user {
+			display: flex;
+			justify-content: end;
+			flex: 1;
+
 			&>img {
 				width: 36px;
 				height: 36px;
@@ -100,6 +123,16 @@ header {
 				}
 			}
 		}
+
+
+	}
+
+	&>.mobileHeader {
+		display: none;
+	}
+
+	&>.menu {
+		display: none;
 	}
 }
 
@@ -107,10 +140,9 @@ header {
 
 
 
+
 @media only screen and (min-width: $desktopWide) {
 	header {
-		margin: 12px 32px;
-
 		&>.topHeader {
 			display: flex;
 			align-items: center;
@@ -205,9 +237,20 @@ header {
 					}
 				}
 			}
+
+
+		}
+
+		&>.mobileHeader {
+			display: none;
+		}
+
+		&>.menu {
+			display: none;
 		}
 	}
 }
+
 
 
 
@@ -269,52 +312,201 @@ header {
 				}
 			}
 		}
+
+		&>.mobileHeader {
+			display: none;
+		}
+
+		&>.menu {
+			display: none;
+		}
 	}
 }
 
 
 
 
-@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+@media only screen and (min-width: 10px) and (max-width: $tabletPortraitMax) {
 	header {
-		display: none;
-		// временно
+		background-color: white;
 
 		&>.topHeader {
-			&>.logo {
-				&>img {}
-			}
-
-			&>.links {
-				&>a {}
-
-				&>.active {}
-			}
-
-			&>.user {
-				&>img {}
-			}
+			display: none;
 		}
 
 		&>.bottomHeader {
-			&>.search {
-				&>input {}
+			display: none;
+		}
 
-				&>button {}
+		&>.mobileHeader {
+			background-color: white;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+			z-index: 5000;
+			width: 100%;
+			padding: 12px 23px;
+			top: 0;
+
+			&>img {
+				width: 160px;
 			}
 
-			&>.buttonHeader {
-				&>button {}
-			}
+			&>.burgerButton {
+				display: flex;
+				gap: 30px;
+				align-items: center;
 
-			&>.messengers {
-				&>a {
-					&>img {}
+				&>img {}
+
+				&>.menu-btn {
+					width: 30px;
+					height: 30px;
+					position: relative;
+					z-index: 2;
+					overflow: hidden;
+
+					&>span {
+						width: 30px;
+						height: 2px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						background-color: #222222;
+						transition: 0.5s;
+					}
+
+					&>span:nth-of-type(2) {
+						display: block;
+						top: calc(50% - 5px);
+					}
+
+					&>span:nth-of-type(3) {
+						display: block;
+						top: calc(50% + 5px);
+					}
+				}
+
+				&>.menu-btn.active {
+					justify-content: center;
+
+					&>span:nth-of-type(1) {
+						opacity: 0;
+					}
+
+					&>span:nth-of-type(2) {
+						top: 50%;
+						transform: translate(-50%, 0%) rotate(45deg);
+					}
+
+					&>span:nth-of-type(3) {
+						top: 50%;
+						transform: translate(-50%, 0%) rotate(-45deg);
+					}
 				}
 			}
 		}
+
+		&>.menu {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #F1F1F1;
+			transform: translateY(-300%);
+			transition: transform 0.5s;
+			z-index: 1;
+			overflow: scroll;
+			height: 100vh;
+
+			&>.accordionBurger {
+				&>.accordion__item {
+					border-top-color: transparent;
+					border-bottom-color: rgba(85, 85, 85, 0.5);
+
+					&>.accordion__header {
+						color: $mainColor;
+						padding: 0.75rem 0.4rem;
+
+						&::after {
+							background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FF974F'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+						}
+					}
+
+					&>.accordion__body {
+						&>.accordion__content {
+							&>a {
+								color: $mainColor ;
+							}
+						}
+					}
+				}
+			}
+
+			&>.buttonHeader {
+				padding: 0 20px 20px 20px;
+
+				&>button {
+					padding: 10px 5px 10px 5px;
+					font-size: 16px;
+					border-radius: 25px;
+					width: 100%;
+					background-color: $mainBgColor;
+					color: white;
+					height: 40px;
+				}
+			}
+
+			&>.searchWrapper {
+				padding: 0 20px 20px 20px;
+
+				&>.search {
+					display: flex;
+					border-radius: 25px;
+					background: white;
+					justify-content: space-between;
+					border: 2px solid $mainBgColor;
+					height: 40px;
+
+					&>input {
+						border-radius: 25px;
+						padding: 0 15px 0 15px;
+						width: 100%;
+					}
+
+					&>button {
+						padding: 0px 5px 0px 5px;
+						border: 4px solid $mainBgColor;
+						font-size: 16px;
+						border-radius: 25px;
+						background-color: $mainBgColor;
+						color: white;
+
+						width: 15%;
+					}
+				}
+			}
+
+			&>.messengers {
+				padding: 0 20px 20px 20px;
+
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+		&>.menu.active {
+			transform: translateX(0);
+			display: block;
+		}
 	}
 }
+
 
 
 
@@ -322,8 +514,5 @@ header {
 
 
 @media only screen and (max-width: $mobile) {
-	header {
-		display: none;
-		// временно
-	}
+	header {}
 }

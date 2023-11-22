@@ -41,6 +41,8 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 button {
@@ -115,9 +117,6 @@ a:active {
 @media only screen and (max-width: $mobile) {}
 
 */
-header {
-  margin: 12px 32px;
-}
 header > .topHeader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,11 +130,19 @@ header > .topHeader {
   gap: 50px;
   margin: 0 0 5px 0;
 }
+header > .topHeader > .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 header > .topHeader > .logo > img {
   width: 200px;
   height: 60px;
 }
 header > .topHeader > .links {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,11 +154,37 @@ header > .topHeader > .links {
 header > .topHeader > .links > a {
   font-size: 18px;
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header > .topHeader > .links > a > svg > path {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header > .topHeader > .links > a:hover > svg > path {
+  color: #FF974F;
+  fill: #FF974F;
+  background-color: #FF974F;
 }
 header > .topHeader > .links > .active {
   color: #FF974F;
   padding: 0 0 5px 0;
   border-bottom: 2px solid #FF974F;
+}
+header > .topHeader > .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 header > .topHeader > .user > img {
   width: 36px;
@@ -226,11 +259,14 @@ header > .bottomHeader > .messengers > a > img {
   width: 36px;
   height: 36px;
 }
+header > .mobileHeader {
+  display: none;
+}
+header > .menu {
+  display: none;
+}
 
 @media only screen and (min-width: 1770px) {
-  header {
-    margin: 12px 32px;
-  }
   header > .topHeader {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -338,6 +374,12 @@ header > .bottomHeader > .messengers > a > img {
     width: 36px;
     height: 36px;
   }
+  header > .mobileHeader {
+    display: none;
+  }
+  header > .menu {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
   header > .topHeader {
@@ -364,15 +406,183 @@ header > .bottomHeader > .messengers > a > img {
     width: 28px;
     height: 28px;
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  header {
+  header > .mobileHeader {
+    display: none;
+  }
+  header > .menu {
     display: none;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 10px) and (max-width: 1023px) {
   header {
+    background-color: white;
+  }
+  header > .topHeader {
     display: none;
+  }
+  header > .bottomHeader {
+    display: none;
+  }
+  header > .mobileHeader {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    z-index: 5000;
+    width: 100%;
+    padding: 12px 23px;
+    top: 0;
+  }
+  header > .mobileHeader > img {
+    width: 160px;
+  }
+  header > .mobileHeader > .burgerButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn > span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #222222;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn > span:nth-of-type(2) {
+    display: block;
+    top: calc(50% - 5px);
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn > span:nth-of-type(3) {
+    display: block;
+    top: calc(50% + 5px);
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn.active {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn.active > span:nth-of-type(1) {
+    opacity: 0;
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn.active > span:nth-of-type(2) {
+    top: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+  }
+  header > .mobileHeader > .burgerButton > .menu-btn.active > span:nth-of-type(3) {
+    top: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(-45deg);
+            transform: translate(-50%, 0%) rotate(-45deg);
+  }
+  header > .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F1F1F1;
+    -webkit-transform: translateY(-300%);
+            transform: translateY(-300%);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: 1;
+    overflow: scroll;
+    height: 100vh;
+  }
+  header > .menu > .accordionBurger > .accordion__item {
+    border-top-color: transparent;
+    border-bottom-color: rgba(85, 85, 85, 0.5);
+  }
+  header > .menu > .accordionBurger > .accordion__item > .accordion__header {
+    color: black;
+    padding: 0.75rem 0.4rem;
+  }
+  header > .menu > .accordionBurger > .accordion__item > .accordion__header::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FF974F'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+  header > .menu > .accordionBurger > .accordion__item > .accordion__body > .accordion__content > a {
+    color: black;
+  }
+  header > .menu > .buttonHeader {
+    padding: 0 20px 20px 20px;
+  }
+  header > .menu > .buttonHeader > button {
+    padding: 10px 5px 10px 5px;
+    font-size: 16px;
+    border-radius: 25px;
+    width: 100%;
+    background-color: #FF974F;
+    color: white;
+    height: 40px;
+  }
+  header > .menu > .searchWrapper {
+    padding: 0 20px 20px 20px;
+  }
+  header > .menu > .searchWrapper > .search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 25px;
+    background: white;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: 2px solid #FF974F;
+    height: 40px;
+  }
+  header > .menu > .searchWrapper > .search > input {
+    border-radius: 25px;
+    padding: 0 15px 0 15px;
+    width: 100%;
+  }
+  header > .menu > .searchWrapper > .search > button {
+    padding: 0px 5px 0px 5px;
+    border: 4px solid #FF974F;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: #FF974F;
+    color: white;
+    width: 15%;
+  }
+  header > .menu > .messengers {
+    padding: 0 20px 20px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header > .menu.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    display: block;
   }
 }
 /* mobile */
@@ -412,6 +622,7 @@ header > .bottomHeader > .messengers > a > img {
 .uniquePlaces > .tab > .tab-nav > .tab-btn {
   color: black;
   padding: 0 0 3px 0;
+  cursor: pointer;
 }
 .uniquePlaces > .tab > .tab-nav > .tab-btn-active {
   pointer-events: none;
@@ -498,6 +709,7 @@ header > .bottomHeader > .messengers > a > img {
   .uniquePlaces > .tab > .tab-nav > .tab-btn {
     color: black;
     padding: 0 0 3px 0;
+    cursor: pointer;
   }
   .uniquePlaces > .tab > .tab-nav > .tab-btn-active {
     pointer-events: none;
@@ -505,6 +717,7 @@ header > .bottomHeader > .messengers > a > img {
     font-weight: 500;
     border-bottom: 2px solid #FF974F;
     padding: 0 0 3px 0;
+    cursor: pointer;
   }
   .uniquePlaces > .tab > .tab-content > .tab-pane:not(.tab-pane-show) {
     display: none;
@@ -1572,7 +1785,7 @@ footer > .wrapper > .footerDesktop > .mainInfoFooter > p {
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .wrapper {
     padding: 0 20px;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
     width: 100%;
     max-width: 1500px;
   }
@@ -1588,7 +1801,7 @@ footer > .wrapper > .footerDesktop > .mainInfoFooter > p {
 @media only screen and (max-width: 767px) {
   .wrapper {
     padding: 0 10px;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
     width: 100%;
     max-width: 1500px;
   }

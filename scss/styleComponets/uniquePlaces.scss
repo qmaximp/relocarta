@@ -20,6 +20,7 @@
 			&>.tab-btn {
 				color: $mainColor;
 				padding: 0 0 3px 0;
+				cursor: pointer;
 			}
 
 			&>.tab-btn-active {
@@ -120,6 +121,7 @@
 				&>.tab-btn {
 					color: $mainColor;
 					padding: 0 0 3px 0;
+					cursor: pointer;
 				}
 
 				&>.tab-btn-active {
@@ -128,6 +130,7 @@
 					font-weight: 500;
 					border-bottom: 2px solid $mainBgColor;
 					padding: 0 0 3px 0;
+					cursor: pointer;
 				}
 			}
 
@@ -219,6 +222,7 @@
 				&>.tab-btn {
 					color: $mainColor;
 					padding: 0 0 3px 0;
+
 				}
 
 				&>.tab-btn-active {

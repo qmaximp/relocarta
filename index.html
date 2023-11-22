@@ -1,453 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>RELOCARTA</title>
-  </head>
-  <body>
-    <header>
-      <div class="topHeader">
-        <div class="logo"><img src="./img/logo.svg" alt="logo" /></div>
-        <div class="links">
-          <a class="active" href="#">Карта</a>
-          <a class="" href="#">Курорты</a>
-          <a class="" href="#">Отели</a>
-          <a class="" href="#">Туры</a>
-          <a class="" href="#">Магазин</a>
-          <a class="" href="#">События</a>
-          <a class="" href="#">Уникальные места</a>
-          <a class="" href="#">Ещё</a>
-        </div>
-        <div class="user">
-          <img src="./img/svgMasasengerMain/user.svg" alt="user" />
-        </div>
-      </div>
 
-      <div class="bottomHeader">
-        <div class="search">
-          <input type="text" placeholder="ㅤ" />
-          <button>поиск</button>
-        </div>
-        <div class="buttonHeader">
-          <button>интересное рядом со мной</button>
-        </div>
-        <div class="messengers">
-          <a href=""
-            ><img src="./img/svgMasasengerMain/whatsapp.svg" alt="whatsapp"
-          /></a>
-          <a href=""
-            ><img src="./img/svgMasasengerMain/gmail.svg" alt="gmail"
-          /></a>
-          <a href=""><img src="./img/svgMasasengerMain/vk.svg" alt="vk" /></a>
-          <a href=""
-            ><img src="./img/svgMasasengerMain/inst.svg" alt="inst"
-          /></a>
-          <a href=""
-            ><img src="./img/svgMasasengerMain/youTube.svg" alt="youTube"
-          /></a>
-          <a href=""
-            ><img src="./img/svgMasasengerMain/telegram.svg" alt=""
-          /></a>
-        </div>
-      </div>
-    </header>
-    <!-- slider  -->
-    <div class="wrapper">
-      <!-- map -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<title>RELOCARTA</title>
+</head>
 
-      <div class="uniquePlaces">
-        <h2>Уникальные места</h2>
+<body>
+	<header>
+		<div class="topHeader">
+			<div class="logo"><img src="./img/logo.svg" alt="logo" /></div>
+			<div class="links">
+				<a class="active" href="#">Карта</a>
+				<a class="" href="#">Курорты</a>
+				<a class="" href="#">Отели</a>
+				<a class="" href="#">Туры</a>
+				<a class="" href="#">Магазин</a>
+				<a class="" href="#">События</a>
+				<a class="" href="#">Уникальные места</a>
+				<a class="" href="#">Ещё
+					<svg width="15" height="15" viewBox="0 0 1024 1024" class="icon" version="1.1"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" fill="#000000" />
+					</svg></a>
+			</div>
+			<div class="user">
+				<img src="./img/svgMasasengerMain/user.svg" alt="user" />
+			</div>
+		</div>
 
-        <div class="tab" id="tab-1">
-          <div class="tab-nav">
-            <a type="button" class="tab-btn tab-btn-active" data-target-id="0">
-              Достопримечательности
-            </a>
-            <a type="button" class="tab-btn" data-target-id="1"> Рестораны </a>
-            <a type="button" class="tab-btn" data-target-id="2"> Отели </a>
-            <a type="button" class="tab-btn" data-target-id="3">
-              Места съемки фильмов
-            </a>
-          </div>
+		<div class="bottomHeader">
+			<div class="search">
+				<input type="text" placeholder="ㅤ" />
+				<button>поиск</button>
+			</div>
+			<div class="buttonHeader">
+				<button>интересное рядом со мной</button>
+			</div>
+			<div class="messengers">
+				<a href=""><img src="./img/svgMasasengerMain/whatsapp.svg" alt="whatsapp" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/gmail.svg" alt="gmail" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/vk.svg" alt="vk" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/inst.svg" alt="inst" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/youTube.svg" alt="youTube" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/telegram.svg" alt="" /></a>
+			</div>
+		</div>
+		<div class="mobileHeader">
+			<img src="./img/logo.svg" alt="logo" />
+			<div class="burgerButton">
+				<img src="./img/svgMasasengerMain/user.svg" alt="user" />
+				<div class="menu-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
 
-          <div class="tab-content">
-            <div class="tab-pane tab-pane-show" data-id="0">
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" data-id="1">
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" data-id="2">
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" data-id="3">
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-              <div class="uniquePlacesItem">
-                <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-                <div class="itemInfo">
-                  <div>
-                    <h2>Античный город пергам</h2>
-                    <p>Измир, Пергама</p>
-                  </div>
-                  <button>Построить маршрут</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+			<div id="accordionBurger" class="accordionBurger"
+				style="display: block; width: 100vw; padding: 70px 20px 20px 20px ">
+				<div class="accordion__item">
+					<div class="accordion__header">Карта</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">о компании</a>
+							<a href="">о команде</a>
+							<a href="">общие контакты</a>
+						</div>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__header">Курорты</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">политика конфиденциальности</a>
+							<a href="">условия использования</a>
+							<a href="">безопасность платежей</a>
+						</div>
+					</div>
+				</div>
 
-      <div class="services">
-        <h2>Услуги</h2>
-        <div class="servicesBlock">
-          <div class="servicesItem">
-            <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-            <div class="servicesItemInfo">
-              <div>
-                <h2>Посети уникальные места</h2>
-                <p>Испытай удивительные ощущения в уникальных местах страны</p>
-              </div>
-              <div><button>перейти</button></div>
-            </div>
-          </div>
-          <div class="servicesItem">
-            <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-            <div class="servicesItemInfo">
-              <div class="servicesItemInfo">
-                <h2>Посети уникальные места</h2>
-                <p>Испытай удивительные ощущения в уникальных местах страны</p>
-              </div>
-              <div><button>перейти</button></div>
-            </div>
-          </div>
-          <div class="servicesItem">
-            <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-            <div class="servicesItemInfo">
-              <div>
-                <h2>Посети уникальные места</h2>
-                <p>Испытай удивительные ощущения в уникальных местах страны</p>
-              </div>
-              <div><button>перейти</button></div>
-            </div>
-          </div>
-          <div class="servicesItem">
-            <img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
-            <div class="servicesItemInfo">
-              <div>
-                <h2>Посети уникальные места</h2>
-                <p>Испытай удивительные ощущения в уникальных местах страны</p>
-              </div>
-              <div><button>перейти</button></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Last minute tours -->
-      <!-- additional information -->
-    </div>
-    <footer>
-      <div class="wrapper">
-        <div class="footerDesktop">
-          <div
-            id="accordion"
-            class="accordion"
-            style="display: block; width: 90vw">
-            <div class="accordion__item">
-              <div class="accordion__header">о нас</div>
-              <div class="accordion__body">
-                <div class="accordion__content">
-                  <a href="">о компании</a>
-                  <a href="">о команде</a>
-                  <a href="">общие контакты</a>
-                </div>
-              </div>
-            </div>
-            <div class="accordion__item">
-              <div class="accordion__header">клиентам</div>
-              <div class="accordion__body">
-                <div class="accordion__content">
-                  <a href="">политика конфиденциальности</a>
-                  <a href="">условия использования</a>
-                  <a href="">безопасность платежей</a>
-                </div>
-              </div>
-            </div>
-            <div class="accordion__item">
-              <div class="accordion__header">путешествия</div>
-              <div class="accordion__body">
-                <div class="accordion__content">
-                  <a href="">путешествия по России</a>
-                  <a href="">истории</a>
-                  <a href="">курорты</a>
-                </div>
-              </div>
-            </div>
-          </div>
+				<div class="accordion__item">
+					<div class="accordion__header">Отели</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">путешествия по России</a>
+							<a href="">истории</a>
+							<a href="">курорты</a>
+						</div>
+					</div>
+				</div>
 
-          <div class="mainInfoFooter">
-            <div class="logo">
-              <img src="./img/logo.svg" alt="logo" />
-            </div>
+				<div class="accordion__item">
+					<div class="accordion__header">Туры</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">путешествия по России</a>
+							<a href="">истории</a>
+							<a href="">курорты</a>
+						</div>
+					</div>
+				</div>
 
-            <div class="contacts">
-              <h2>8 800 770 70 21</h2>
-              <p>круглосуточный телефон call-центра</p>
-              <a href="">написать в WharsApp</a>
-            </div>
+				<div class="accordion__item">
+					<div class="accordion__header">Магазин</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">путешествия по России</a>
+							<a href="">истории</a>
+							<a href="">курорты</a>
+						</div>
+					</div>
+				</div>
 
-            <div class="messengers">
-              <a href=""
-                ><img src="./img/svgMassengerWhite/whatsapp.svg" alt="whatsapp"
-              /></a>
-              <a href=""
-                ><img src="./img/svgMassengerWhite/gmail.svg" alt="gmail"
-              /></a>
-              <a href=""
-                ><img src="./img/svgMassengerWhite/vk.svg" alt="vk"
-              /></a>
-              <a href=""
-                ><img src="./img/svgMassengerWhite/inst.svg" alt="inst"
-              /></a>
-              <a href=""
-                ><img src="./img/svgMassengerWhite/youTube.svg" alt="youTube"
-              /></a>
-              <a href=""
-                ><img src="./img/svgMassengerWhite/telegram.svg" alt=""
-              /></a>
-            </div>
-            <p>© ООО "Релокарта", 2023</p>
-          </div>
-          <div>
-            <h2>о нас</h2>
-            <a href="">о компании</a>
-            <a href="">о команде</a>
-            <a href="">общие контакты</a>
-          </div>
-          <div>
-            <h2>клиентам</h2>
-            <a href="">политика конфиденциальности</a>
-            <a href="">условия использования</a>
-            <a href="">безопасность платежей</a>
-          </div>
-          <div>
-            <h2>путешествия</h2>
-            <a href="">путешествия по России</a>
-            <a href="">истории</a>
-            <a href="">курорты</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="./js/script.js"></script>
-    <script src="./js/tabs.js"></script>
-    <script src="./js/accordion.js"></script>
-  </body>
+				<div class="accordion__item">
+					<div class="accordion__header">События</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">путешествия по России</a>
+							<a href="">истории</a>
+							<a href="">курорты</a>
+						</div>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__header">Уникальные места</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">путешествия по России</a>
+							<a href="">истории</a>
+							<a href="">курорты</a>
+						</div>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__header">Истории</div>
+					<div class="accordion__body">
+						<div class="accordion__content">
+							<a href="">путешествия по России</a>
+							<a href="">истории</a>
+							<a href="">курорты</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="buttonHeader">
+				<button>интересное рядом со мной</button>
+			</div>
+			<div class="searchWrapper">
+				<div class="search">
+					<input type="text" placeholder="ㅤ" />
+					<button>поиск</button>
+				</div>
+			</div>
+			<div class="messengers">
+				<a href=""><img src="./img/svgMasasengerMain/whatsapp.svg" alt="whatsapp" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/gmail.svg" alt="gmail" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/vk.svg" alt="vk" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/inst.svg" alt="inst" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/youTube.svg" alt="youTube" /></a>
+				<a href=""><img src="./img/svgMasasengerMain/telegram.svg" alt="" /></a>
+			</div>
+		</div>
+
+
+
+		</div>
+		</div>
+	</header>
+	<!-- slider  -->
+	<div class="wrapper">
+		<!-- map -->
+
+		<div class="uniquePlaces">
+			<h2>Уникальные места</h2>
+
+			<div class="tab" id="tab-1">
+				<div class="tab-nav">
+					<a type="button" class="tab-btn tab-btn-active" data-target-id="0">
+						Достопримечательности
+					</a>
+					<a type="button" class="tab-btn" data-target-id="1"> Рестораны </a>
+					<a type="button" class="tab-btn" data-target-id="2"> Отели </a>
+					<a type="button" class="tab-btn" data-target-id="3">
+						Места съемки фильмов
+					</a>
+				</div>
+
+				<div class="tab-content">
+					<div class="tab-pane tab-pane-show" data-id="0">
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" data-id="1">
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" data-id="2">
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" data-id="3">
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+						<div class="uniquePlacesItem">
+							<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+							<div class="itemInfo">
+								<div>
+									<h2>Античный город пергам</h2>
+									<p>Измир, Пергама</p>
+								</div>
+								<button>Построить маршрут</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="services">
+			<h2>Услуги</h2>
+			<div class="servicesBlock">
+				<div class="servicesItem">
+					<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+					<div class="servicesItemInfo">
+						<div>
+							<h2>Посети уникальные места</h2>
+							<p>Испытай удивительные ощущения в уникальных местах страны</p>
+						</div>
+						<div><button>перейти</button></div>
+					</div>
+				</div>
+				<div class="servicesItem">
+					<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+					<div class="servicesItemInfo">
+						<div class="servicesItemInfo">
+							<h2>Посети уникальные места</h2>
+							<p>Испытай удивительные ощущения в уникальных местах страны</p>
+						</div>
+						<div><button>перейти</button></div>
+					</div>
+				</div>
+				<div class="servicesItem">
+					<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+					<div class="servicesItemInfo">
+						<div>
+							<h2>Посети уникальные места</h2>
+							<p>Испытай удивительные ощущения в уникальных местах страны</p>
+						</div>
+						<div><button>перейти</button></div>
+					</div>
+				</div>
+				<div class="servicesItem">
+					<img src="./img/5656d35727009cabea6ce79973a9702c.jpeg" alt="" />
+					<div class="servicesItemInfo">
+						<div>
+							<h2>Посети уникальные места</h2>
+							<p>Испытай удивительные ощущения в уникальных местах страны</p>
+						</div>
+						<div><button>перейти</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Last minute tours -->
+		<!-- additional information -->
+	</div>
+	<footer>
+		<div class="wrapper">
+			<div class="footerDesktop">
+				<div id="accordionFooter" class="accordionFooter" style="display: block; width: 90vw">
+					<div class="accordion__item">
+						<div class="accordion__header">о нас</div>
+						<div class="accordion__body">
+							<div class="accordion__content">
+								<a href="">о компании</a>
+								<a href="">о команде</a>
+								<a href="">общие контакты</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__header">клиентам</div>
+						<div class="accordion__body">
+							<div class="accordion__content">
+								<a href="">политика конфиденциальности</a>
+								<a href="">условия использования</a>
+								<a href="">безопасность платежей</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__header">путешествия</div>
+						<div class="accordion__body">
+							<div class="accordion__content">
+								<a href="">путешествия по России</a>
+								<a href="">истории</a>
+								<a href="">курорты</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="mainInfoFooter">
+					<div class="logo">
+						<img src="./img/logo.svg" alt="logo" />
+					</div>
+
+					<div class="contacts">
+						<h2>8 800 770 70 21</h2>
+						<p>круглосуточный телефон call-центра</p>
+						<a href="">написать в WharsApp</a>
+					</div>
+
+					<div class="messengers">
+						<a href=""><img src="./img/svgMassengerWhite/whatsapp.svg" alt="whatsapp" /></a>
+						<a href=""><img src="./img/svgMassengerWhite/gmail.svg" alt="gmail" /></a>
+						<a href=""><img src="./img/svgMassengerWhite/vk.svg" alt="vk" /></a>
+						<a href=""><img src="./img/svgMassengerWhite/inst.svg" alt="inst" /></a>
+						<a href=""><img src="./img/svgMassengerWhite/youTube.svg" alt="youTube" /></a>
+						<a href=""><img src="./img/svgMassengerWhite/telegram.svg" alt="" /></a>
+					</div>
+					<p>© ООО "Релокарта", 2023</p>
+				</div>
+				<div>
+					<h2>о нас</h2>
+					<a href="">о компании</a>
+					<a href="">о команде</a>
+					<a href="">общие контакты</a>
+				</div>
+				<div>
+					<h2>клиентам</h2>
+					<a href="">политика конфиденциальности</a>
+					<a href="">условия использования</a>
+					<a href="">безопасность платежей</a>
+				</div>
+				<div>
+					<h2>путешествия</h2>
+					<a href="">путешествия по России</a>
+					<a href="">истории</a>
+					<a href="">курорты</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="./js/script.js"></script>
+	<script src="./js/burgerMenu.js"></script>
+	<script src="./js/tabs.js"></script>
+	<script src="./js/accordion.js"></script>
+</body>
+
 </html>
